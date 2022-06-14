@@ -21,10 +21,6 @@ body {
   padding: 10px 15px;
 }
 
-.container h2::first-letter{
-  text-transform: uppercase;
-}
-
 .title{
   margin-bottom: 20px;
   margin-top: 20px;
@@ -73,7 +69,7 @@ body {
 .card .pokemonName {
   position: absolute;
   bottom: 50px;
-  transition: transform 1s;
+  transition: transform 1s, font-size 1s;
   background-image: linear-gradient(to right, #3CB371, #9400D3);
   /* agora colocamos o fundo gradiente dentro do texto com essa propriedade */
   background-clip: text;
@@ -84,6 +80,7 @@ body {
 
 .card:hover .pokemonName {
   transform: translate(40px, -165px);
+  font-size: 1.25rem;
 }
 
 .card .stats {
