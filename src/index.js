@@ -5,16 +5,16 @@ async function fetchPokemon(){
     const result = await response.json();
     pokemons.push(result);
   }
-  console.log(pokemons)
+  //console.log(pokemons)
 
-  /* const numberOfTypes = () => {
+  const numberOfTypes = (id) => {
     arrayOfTypes = [];
-    result.types.forEach((element) => {
+    pokemons[id].types.forEach((element) => {
       arrayOfTypes.push(element.type.name)
     } )
     return arrayOfTypes.length === 1 ? `${arrayOfTypes[0]}`: `${arrayOfTypes[0]} | ${arrayOfTypes[1]}`;
   }
-   */
+
   pokemons.forEach((element, index) => {
     const card = `
     <div class="card">
@@ -22,7 +22,7 @@ async function fetchPokemon(){
       <h2 class="pokemonName">${element.name}</h2>
       <div class="stats">
         <div class="stats-content">
-          <span>Type:  </span>
+          <span>Type: ${numberOfTypes(index)} </span>
           <span>${element.stats[1].stat.name}: ${element.stats[1].base_stat}</span>
           <span>${element.stats[2].stat.name}: ${element.stats[2].base_stat}</span>
           <span>${element.stats[3].stat.name}: ${element.stats[3].base_stat}</span>
