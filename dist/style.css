@@ -16,7 +16,7 @@ body {
   height: 100%;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	grid-gap: 20px;
   padding: 10px 15px;
 }
