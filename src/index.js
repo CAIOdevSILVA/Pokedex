@@ -12,7 +12,7 @@ async function fetchPokemon(){
     pokemons[id].types.forEach((element) => {
       arrayOfTypes.push(element.type.name)
     } )
-    return arrayOfTypes.length === 1 ? `${arrayOfTypes[0]}`: `${arrayOfTypes[0]} | ${arrayOfTypes[1]}`;
+    return arrayOfTypes.length === 1 ? `<span class="type">${arrayOfTypes[0]}</span>` : `<span class="type">${arrayOfTypes[0]}</span> <span class="type2">${arrayOfTypes[1]}</span>`;
   }
 
   pokemons.forEach((element, index) => {

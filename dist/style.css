@@ -113,18 +113,19 @@ body {
   text-transform: uppercase;
 }
 
-.card .stats .stats-content span .grass{
+.card .stats .stats-content span .type{
   padding: 2px 2px;
   border-radius: 2px;
   background: #3CB371;
   font-size: .8rem;
+  text-transform: capitalize;
 }
-
-.card .stats .stats-content span .poison{
+.card .stats .stats-content span .type2{
   padding: 2px 2px;
   border-radius: 2px;
   background: #9400D3;
   font-size: .8rem;
+  text-transform: capitalize;
 }
 
 .card .stats::before{
